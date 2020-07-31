@@ -73,10 +73,7 @@ def inference_branch_app():
 
         model_option = st.sidebar.selectbox(
             'Please Select the Model',
-            (
-                '', 'VGG16', 'VGG19', 'ResNet50', 'ResNet101',
-                'ResNet152', 'MobileNetV1', 'MobileNetV2'
-            )
+            tuple([''] + list(MODEL_DICT.keys()))
         )
 
         if model_option in list(MODEL_DICT.keys()):
