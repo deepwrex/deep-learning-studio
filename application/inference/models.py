@@ -37,7 +37,7 @@ MODEL_DICT = {
         'conv5_block3_out', (224, 224),
         ['avg_pool', 'predictions']
     ],
-    'MobileNetV1': [
+    'MobileNet-V1': [
         tf.keras.applications.mobilenet.MobileNet,
         tf.keras.applications.mobilenet.preprocess_input,
         tf.keras.applications.mobilenet.decode_predictions,
@@ -47,7 +47,7 @@ MODEL_DICT = {
             'conv_preds', 'reshape_2', 'predictions'
         ]
     ],
-    'MobileNetV2': [
+    'MobileNet-V2': [
         tf.keras.applications.mobilenet_v2.MobileNetV2,
         tf.keras.applications.mobilenet_v2.preprocess_input,
         tf.keras.applications.mobilenet_v2.decode_predictions,
@@ -58,7 +58,21 @@ MODEL_DICT = {
         tf.keras.applications.inception_resnet_v2.InceptionResNetV2,
         tf.keras.applications.inception_resnet_v2.preprocess_input,
         tf.keras.applications.inception_resnet_v2.decode_predictions,
-        'conv_7b_ac', (224, 224),
+        'conv_7b_ac', (299, 299),
+        ['avg_pool', 'predictions']
+    ],
+    'Inception-V3': [
+        tf.keras.applications.inception_v3.InceptionV3,
+        tf.keras.applications.inception_v3.preprocess_input,
+        tf.keras.applications.inception_v3.decode_predictions,
+        'mixed10', (299, 299),
+        ['avg_pool', 'predictions']
+    ],
+    'Xception': [
+        tf.keras.applications.xception.Xception,
+        tf.keras.applications.xception.preprocess_input,
+        tf.keras.applications.xception.decode_predictions,
+        'block14_sepconv2_act', (299, 299),
         ['avg_pool', 'predictions']
     ]
 }
