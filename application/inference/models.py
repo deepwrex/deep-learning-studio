@@ -74,5 +74,23 @@ MODEL_DICT = {
         tf.keras.applications.xception.decode_predictions,
         'block14_sepconv2_act', (299, 299),
         ['avg_pool', 'predictions']
-    ]
+    ],
+    'DenseNet121': [
+        tf.keras.applications.densenet.DenseNet121,
+        tf.keras.applications.densenet.preprocess_input,
+        tf.keras.applications.densenet.decode_predictions,
+        'relu', (299, 299), ['avg_pool', 'predictions']
+    ],
+    'DenseNet169': [
+        tf.keras.applications.densenet.DenseNet169,
+        tf.keras.applications.densenet.preprocess_input,
+        tf.keras.applications.densenet.decode_predictions,
+        'relu', (299, 299), ['avg_pool', 'predictions']
+    ],
+    'DenseNet201': [
+        tf.keras.applications.densenet.DenseNet201,
+        tf.keras.applications.densenet.preprocess_input,
+        tf.keras.applications.densenet.decode_predictions,
+        'relu', (299, 299), ['avg_pool', 'predictions']
+    ],
 }
