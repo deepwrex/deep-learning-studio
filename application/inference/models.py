@@ -111,4 +111,60 @@ MODEL_DICT = {
         tf.keras.applications.resnet_v2.decode_predictions,
         'post_relu', (299, 299), ['avg_pool', 'predictions']
     ],
+    'EfficientNetB0': [
+        tf.keras.applications.efficientnet.EfficientNetB0,
+        tf.keras.applications.efficientnet.preprocess_input,
+        tf.keras.applications.efficientnet.decode_predictions,
+        'top_activation', (299, 299),
+        ['avg_pool', 'top_dropout', 'predictions']
+    ],
+    'EfficientNetB1': [
+        tf.keras.applications.efficientnet.EfficientNetB1,
+        tf.keras.applications.efficientnet.preprocess_input,
+        tf.keras.applications.efficientnet.decode_predictions,
+        'top_activation', (299, 299),
+        ['avg_pool', 'top_dropout', 'predictions']
+    ],
+    'EfficientNetB2': [
+        tf.keras.applications.efficientnet.EfficientNetB2,
+        tf.keras.applications.efficientnet.preprocess_input,
+        tf.keras.applications.efficientnet.decode_predictions,
+        'top_activation', (299, 299),
+        ['avg_pool', 'top_dropout', 'predictions']
+    ],
+    'EfficientNetB3': [
+        tf.keras.applications.efficientnet.EfficientNetB3,
+        tf.keras.applications.efficientnet.preprocess_input,
+        tf.keras.applications.efficientnet.decode_predictions,
+        'top_activation', (299, 299),
+        ['avg_pool', 'top_dropout', 'predictions']
+    ],
+    'EfficientNetB4': [
+        tf.keras.applications.efficientnet.EfficientNetB4,
+        tf.keras.applications.efficientnet.preprocess_input,
+        tf.keras.applications.efficientnet.decode_predictions,
+        'top_activation', (299, 299),
+        ['avg_pool', 'top_dropout', 'predictions']
+    ],
+    'EfficientNetB5': [
+        tf.keras.applications.efficientnet.EfficientNetB5,
+        tf.keras.applications.efficientnet.preprocess_input,
+        tf.keras.applications.efficientnet.decode_predictions,
+        'top_activation', (299, 299),
+        ['avg_pool', 'top_dropout', 'predictions']
+    ],
+    'EfficientNetB6': [
+        tf.keras.applications.efficientnet.EfficientNetB6,
+        tf.keras.applications.efficientnet.preprocess_input,
+        tf.keras.applications.efficientnet.decode_predictions,
+        'top_activation', (299, 299),
+        ['avg_pool', 'top_dropout', 'predictions']
+    ],
+    'EfficientNetB7': [
+        tf.keras.applications.efficientnet.EfficientNetB7,
+        tf.keras.applications.efficientnet.preprocess_input,
+        tf.keras.applications.efficientnet.decode_predictions,
+        'top_activation', (299, 299),
+        ['avg_pool', 'top_dropout', 'predictions']
+    ],
 }
