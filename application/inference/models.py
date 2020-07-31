@@ -93,4 +93,22 @@ MODEL_DICT = {
         tf.keras.applications.densenet.decode_predictions,
         'relu', (299, 299), ['avg_pool', 'predictions']
     ],
+    'ResNet50-V2': [
+        tf.keras.applications.resnet_v2.ResNet50V2,
+        tf.keras.applications.resnet_v2.preprocess_input,
+        tf.keras.applications.resnet_v2.decode_predictions,
+        'post_relu', (299, 299), ['avg_pool', 'predictions']
+    ],
+    'ResNet101-V2': [
+        tf.keras.applications.resnet_v2.ResNet101V2,
+        tf.keras.applications.resnet_v2.preprocess_input,
+        tf.keras.applications.resnet_v2.decode_predictions,
+        'post_relu', (299, 299), ['avg_pool', 'predictions']
+    ],
+    'ResNet152-V2': [
+        tf.keras.applications.resnet_v2.ResNet152V2,
+        tf.keras.applications.resnet_v2.preprocess_input,
+        tf.keras.applications.resnet_v2.decode_predictions,
+        'post_relu', (299, 299), ['avg_pool', 'predictions']
+    ],
 }
