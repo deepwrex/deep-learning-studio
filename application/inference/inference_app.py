@@ -66,7 +66,7 @@ def inference_branch_app():
             image_pil = Image.open(image_path)
             original_size = image_pil.size
             height, width = original_size
-            st.image(image_pil, caption='Input Image')
+            st.image(image_pil, caption='Input Image', use_column_width=True)
             image_pil = image_pil.resize((224, 224))
         except:
             st.error('Invalid File')
