@@ -74,7 +74,7 @@ def inference_branch_app():
             'Please Select the Model',
             (
                 '', 'VGG16', 'VGG19', 'ResNet50', 'ResNet101',
-                'MobileNetV1', 'MobileNetV2'
+                'ResNet152', 'MobileNetV1', 'MobileNetV2'
             )
         )
 
@@ -102,6 +102,13 @@ def inference_branch_app():
             ],
             'ResNet101': [
                 tf.keras.applications.resnet.ResNet101,
+                tf.keras.applications.resnet.preprocess_input,
+                tf.keras.applications.resnet.decode_predictions,
+                'conv5_block3_out', (224, 224),
+                ['avg_pool', 'predictions']
+            ],
+            'ResNet152': [
+                tf.keras.applications.resnet.ResNet152,
                 tf.keras.applications.resnet.preprocess_input,
                 tf.keras.applications.resnet.decode_predictions,
                 'conv5_block3_out', (224, 224),
