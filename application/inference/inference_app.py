@@ -72,7 +72,7 @@ def inference_branch_app():
 
         model_option = st.sidebar.selectbox(
             'Please Select the Model',
-            ('', 'VGG16', 'VGG19', 'ResNet50')
+            ('', 'VGG16', 'VGG19', 'ResNet50', 'MobileNetV1')
         )
 
         model_dict = {
@@ -96,6 +96,16 @@ def inference_branch_app():
                 tf.keras.applications.resnet50.decode_predictions,
                 'conv5_block3_out', (224, 224),
                 ['avg_pool', 'predictions']
+            ],
+            'MobileNetV1': [
+                tf.keras.applications.mobilenet.MobileNet,
+                tf.keras.applications.mobilenet.preprocess_input,
+                tf.keras.applications.mobilenet.decode_predictions,
+                'conv_pw_13_relu', (224, 224),
+                [
+                    'global_average_pooling2d', 'reshape_1', 'dropout',
+                    'conv_preds', 'reshape_2', 'predictions'
+                ]
             ]
         }
 
