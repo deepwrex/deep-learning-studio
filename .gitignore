@@ -3,5 +3,7 @@ test.py
 dump.txt
 .DS_Store
 src/__pycache__/
+application/utils/__pycache__/
 application/inference/__pycache__/
 assets/dl-studio-pre-trained-inference.mp4
+application/image/classification/__pycache__/
