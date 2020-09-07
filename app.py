@@ -22,4 +22,5 @@ def run_app():
 
 
 if __name__ == '__main__':
+    st.set_option('deprecation.showfileUploaderEncoding', False)
     run_app()

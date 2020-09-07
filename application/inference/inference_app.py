@@ -4,7 +4,7 @@ import tensorflow as tf
 from .models import MODEL_DICT
 from src.gradcam import GradCam
 from .utils import (
-    get_overlayed_image, get_model_summary,
+    get_overlayed_image,
     visualize_classification_prediction
 )
 
